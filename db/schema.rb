@@ -11,16 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160114212707) do
+ActiveRecord::Schema.define(version: 20160114214105) do
 
   create_table "alienigenas", force: true do |t|
     t.string   "name"
     t.integer  "age"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "planet_id"
   end
 
+  add_index "alienigenas", ["planet_id"], name: "index_alienigenas_on_planet_id"
+
   create_table "planeta", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "poders", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"

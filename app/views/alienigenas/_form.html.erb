@@ -10,7 +10,10 @@
       </ul>
     </div>
   <% end %>
-
+<div class="field">
+    <%= f.label :planeta %><br>
+    <%= collection_select(:alienigena, :planet_id, Planetum.all, :id, :name) %>
+  </div>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>

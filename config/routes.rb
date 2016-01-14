@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :poders
+
   resources :planeta
 
   resources :alienigenas
