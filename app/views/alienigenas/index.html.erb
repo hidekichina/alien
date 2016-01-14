@@ -1,0 +1,27 @@
+<h1>Listing alienigenas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @alienigenas.each do |alienigena| %>
+      <tr>
+        <td><%= alienigena.name %></td>
+        <td><%= alienigena.age %></td>
+        <td><%= link_to 'Show', alienigena %></td>
+        <td><%= link_to 'Edit', edit_alienigena_path(alienigena) %></td>
+        <td><%= link_to 'Destroy', alienigena, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Alienigena', new_alienigena_path %>
