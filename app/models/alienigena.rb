@@ -3,4 +3,5 @@ class Alienigena < ActiveRecord::Base
 
     has_many :alienigena_poders
     has_many :poders, through: :alienigena_poders
+     validates_presence_of  :name
 end
