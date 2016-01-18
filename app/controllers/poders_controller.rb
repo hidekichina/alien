@@ -5,6 +5,7 @@ class PodersController < ApplicationController
   # GET /poders.json
   def index
     @poders = Poder.all
+    @model_name = controller_name.classify
   end
 
   # GET /poders/1

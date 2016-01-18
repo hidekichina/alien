@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160118151616) do
+ActiveRecord::Schema.define(version: 20160118154653) do
+
+  create_table "alienigena_poders", force: true do |t|
+    t.integer  "alien_id"
+    t.string   "power"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "alienigena_poders", ["alien_id"], name: "index_alienigena_poders_on_alien_id"
 
   create_table "alienigenas", force: true do |t|
     t.string   "name"
