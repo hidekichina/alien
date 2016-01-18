@@ -19,9 +19,11 @@ ActiveRecord::Schema.define(version: 20160114214105) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "planet_id"
+    t.integer  "planetum_id"
   end
 
   add_index "alienigenas", ["planet_id"], name: "index_alienigenas_on_planet_id"
+  add_index "alienigenas", ["planetum_id"], name: "index_alienigenas_on_planetum_id"
 
   create_table "planeta", force: true do |t|
     t.string   "name"

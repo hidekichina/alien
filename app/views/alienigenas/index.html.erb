@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Name</th>
+      <th>planeta</th>
       <th>Age</th>
       <th colspan="3"></th>
     </tr>
@@ -13,6 +14,7 @@
     <% @alienigenas.each do |alienigena| %>
       <tr>
         <td><%= alienigena.name %></td>
+        <td><%= alienigena.planetum.name %></td>
         <td><%= alienigena.age %></td>
         <td><%= link_to 'Show', alienigena %></td>
         <td><%= link_to 'Edit', edit_alienigena_path(alienigena) %></td>

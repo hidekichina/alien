@@ -69,6 +69,6 @@ class AlienigenasController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def alienigena_params
-      params.require(:alienigena).permit(:name, :age, :planeta_id)
+      params.require(:alienigena).permit(:name, :age, :planetum_id)
     end
 end
